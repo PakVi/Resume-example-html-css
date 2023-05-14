@@ -1,0 +1,318 @@
+@font-face {
+    src: url('../fonts/Caveat-Regular.ttf');
+    font-family: 'Caveat-Regular';
+}
+
+@font-face {
+    src: url('../fonts/Caveat-Bold.ttf');
+    font-family: 'Caveat-Bold';
+}
+
+@font-face {
+    src: url('../fonts/Caveat-Medium.ttf');
+    font-family: 'Caveat-Medium';
+}
+
+@font-face {
+    src: url('../fonts/Caveat-SemiBold.ttf');
+    font-family: 'Caveat-SemiBold';
+}
+
+h1 {
+
+  font-family:Caveat-Bold;
+
+}
+
+
+h2, h3 {
+  
+  font-family:Caveat-Medium;
+
+}
+
+body {
+
+  font-family:Caveat-Regular, Helvetica, Arial;
+  font-size: 1.4rem;
+
+}
+
+.container p {
+  font-family:Caveat-Bold;
+  
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 2px;
+  background: #708090;
+  color: white;
+  width: 100%;
+  position:fixed;
+  z-index: 2;
+  display: block;
+
+
+}
+
+@media screen and (orientation:landscape) {
+  .menu {
+    width: 100%;
+    z-index: 2;
+    padding: 5px;
+
+
+  }
+
+  .menu-app {
+    display: inline;
+    margin-right: 50px;
+
+  }
+}
+
+
+@media all and (orientation:landscape) {
+    .contents {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        color: #050505;
+
+    }
+    .image-about {
+        margin: 0;
+        padding: 0;
+        float: left;
+        padding-left: 10%;
+
+    }
+    .image-about img {
+        margin: 0;
+        padding: 0;
+        height: 250px;
+        border: 2px solid #4169E1;
+        border-radius: 103px;
+    }
+
+
+       .text-about {
+        padding: 20px;
+        margin: 30px;
+        padding-right: 10%;
+
+
+    
+    }
+}
+@media all and (orientation:portrait) {
+    .contents {
+        display: block;
+        padding: 0;
+        color: #050505;
+        position: relative;
+        top: 130px;
+        margin-bottom: 10%;
+
+
+
+    }
+    .text-about {
+        padding: 10px;
+    }
+
+    .image-about img {
+        display: block;
+        max-width: 100%;
+        margin:auto;
+        border: 2px solid #4169E1;
+        border-radius: 103px;
+        z-index: -1;
+
+
+    }
+}
+
+
+.head{
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.containers {
+  width: 100%;
+}
+
+
+.skills {
+  text-align: right; 
+  color: white; 
+  font-size: 1rem;
+  font-family:Caveat-Bold;
+}
+
+.eat {width: 70%; background-color: #8B0000;} 
+.sleep {width: 78%; background-color: #4169E1;} 
+.mous {width: 15%; background-color: #800080;} 
+.tapok {width: 66%; background-color: #8B4513;} 
+.cry {width: 35%; background-color: #708090;} 
+.mur {width: 55%; background-color: #006400;} 
+
+.grid-wrapper {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+/*    grid-template-columns: 30% 30% 30%;*/
+    grid-template-rows: auto;
+    padding-left: 5%;
+
+}
+
+
+
+
+.timeline {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #4169E1;
+  top: 0;
+  bottom: 0;
+  left: 30%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 2px solid #4169E1;;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.right {
+  left: 30%;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+
+.right::after {
+  left: -16px;
+}
+
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+
+}
+
+
+@media screen and (orientation:portrait) {
+
+  .timeline::after {
+    left: 31px;
+  }
+
+
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+
+  .right::after {
+    left: 15px;
+  }
+
+
+  .right {
+    left: 0%;
+  }
+
+}
+
+.collapsible {
+  background-color: #000080;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #0000FF;
+    
+
+}
+
+.content-bar {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+    }
+
+.content-bar img{
+  width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+
+}
+
